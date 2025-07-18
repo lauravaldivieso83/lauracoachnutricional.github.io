@@ -9,103 +9,223 @@
     /* Reset y tipografía */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Montserrat', sans-serif; color: #333; background: #f9f9f9; }
-    a { text-decoration: none; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
 
-    /* Contenedor central */
+    /* Clases de sección */
     .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    .section-spacing { margin: 60px 0; }
 
-    /* Header / Hero */
     header { text-align: center; padding: 80px 20px; background: white; border-bottom: 1px solid #eee; }
     header h1 { font-size: 3rem; color: #2a7d5f; }
     header p { margin-top: 20px; font-size: 1.2rem; }
-    header .btn { display: inline-block; margin-top: 30px; padding: 15px 30px; background: #2a7d5f; color: white; border-radius: 5px; transition: background 0.3s; }
-    header .btn:hover { background: #246a4d; }
+    header .btn { display:inline-block; margin-top:30px; padding:15px 30px; background:#2a7d5f; color:white; border-radius:5px; }
+    header .btn:hover { background:#246a4d; }
 
-    /* Sección beneficios */
-    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 60px 0; }
-    .benefit { background: white; padding: 30px 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); text-align: center; }
-    .benefit h3 { color: #2a7d5f; margin-bottom: 15px; }
+    /* Sobre mí */
+    .about { background:white; padding:40px 20px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    .about img { width:150px; height:150px; border-radius:50%; margin-bottom:20px; }
+    .about h2 { color:#2a7d5f; margin-bottom:16px; }
+    .about p { margin-bottom:24px; line-height:1.6; }
+
+    /* Beneficios */
+    .benefits { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .benefit { background:white; padding:30px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    .benefit h3 { color:#2a7d5f; margin-bottom:15px; }
+
+    /* Lo que aprenderás */
+    .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .feature { text-align:center; }
+    .feature-icon { font-size:2rem; color:#2a7d5f; margin-bottom:12px; }
+    .feature p { line-height:1.4; }
+
+    /* Planes */
+    .plans { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .plan { background:white; padding:30px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    .plan h3 { color:#2a7d5f; margin-bottom:8px; }
+    .plan-price { font-size:2rem; margin:16px 0; }
+    .plan ul { text-align:left; margin-bottom:20px; }
+    .plan .btn { padding:10px 20px; background:#2a7d5f; color:white; border-radius:5px; }
+
+    /* Garantía */
+    .guarantee { background:#f0fff4; border-left:4px solid #2a7d5f; padding:20px; margin:60px 0; }
+
+    /* FAQ */
+    .faq { background:white; padding:40px 20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    .faq h2 { text-align:center; color:#2a7d5f; margin-bottom:30px; }
+    .faq-item { margin-bottom:20px; }
+    .faq-item h4 { font-weight:700; cursor:pointer; }
+    .faq-item p { margin-top:8px; }
+
+    /* Antes y Después */
+    .before-after { background:white; padding:40px 20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center; }
+    .ba-images { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .ba-images div { flex:1 1 200px; }
+    .ba-images img { width:100%; border-radius:8px; }
+
+    /* Video */
+    .video-container { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; }
+    .video-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+
+    /* Lead Magnet */
+    .lead-magnet { background:white; padding:40px 20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center; }
+    .lead-magnet h2 { margin-bottom:16px; color:#2a7d5f; }
+    .lead-magnet p { margin:0 0 24px; }
+    .lead-magnet .btn { margin-top:0; padding:12px 24px; background:#2a7d5f; color:white; border-radius:5px; }
 
     /* Testimonios */
-    .testimonials { background: white; padding: 60px 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .testimonials h2 { text-align: center; color: #2a7d5f; margin-bottom: 40px; }
-    .testimonial { margin-bottom: 30px; font-style: italic; }
-    .testimonial:last-child { margin-bottom: 0; }
-    .testimonial p { margin-bottom: 10px; }
-    .testimonial .author { font-weight: bold; }
+    .testimonials { background:white; padding:40px 20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    .testimonials h2 { text-align:center; color:#2a7d5f; margin-bottom:30px; }
+    .testimonial { margin-bottom:20px; font-style:italic; }
+    .testimonial .author { font-weight:bold; margin-top:5px; }
+
+    /* Suscripción */
+    .subscribe { background:#2a7d5f; color:white; padding:40px 20px; border-radius:8px; text-align:center; }
+    .subscribe input[type=email] { padding:12px; width:60%; max-width:300px; margin-right:8px; border:none; border-radius:4px; }
+    .subscribe .btn { padding:12px 20px; }
 
     /* Footer */
-    footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #777; }
-    footer a { color: #777; }
-/* —————— Espacio en Lead Magnet —————— */
-.lead-magnet h2 {
-  margin-bottom: 16px;
-}
-.lead-magnet p {
-  margin: 0 0 24px;
-}
-.lead-magnet .btn {
-  margin-top: 0;
-}
-
-</style>
+    footer { text-align:center; padding:30px 20px; font-size:0.9rem; color:#777; }
+    footer a { color:#777; }
+  </style>
 </head>
 <body>
+
+  <!-- Header / Hero -->
   <header>
     <div class="container">
       <h1>Transforma tu alimentación, transforma tu vida</h1>
-      <p>Soy Laura, coach nutricional. Te acompaño a alcanzar tus objetivos con planes personalizados y sostenibles.</p>
-      <a href="https://calendly.com/r-lauravaldivieso" class="btn" target="_blank">Reserva tu asesoría gratuita</a>
+      <p>Soy Laura, coach nutricional. Te ayudo a lograr tus metas con un plan personalizado y apoyo continuo.</p>
+      <a href="https://calendly.com/r-lauravaldivieso" class="btn" target="_blank">Agenda tu sesión gratuita</a>
     </div>
   </header>
 
   <main class="container">
+
+    <!-- Sobre mí -->
+    <section class="about section-spacing">
+      <img src="tu-foto.jpg" alt="Laura Coach Nutricional">
+      <h2>Sobre mí</h2>
+      <p>Soy licenciada en Nutrición y coach certificada. Durante 5 años he ayudado a más de 200 personas a mejorar su salud y su relación con la comida.</p>
+    </section>
+
     <!-- Beneficios -->
-    <section class="benefits">
-      <div class="benefit">
-        <h3>Planes a tu medida</h3>
-        <p>Planes nutricionales adaptados a tus gustos y estilo de vida.</p>
+    <section class="benefits section-spacing">
+      <div class="benefit"><h3>Planes a tu medida</h3><p>Dietas flexibles adaptadas a tu estilo de vida.</p></div>
+      <div class="benefit"><h3>Soporte continuo</h3><p>Seguimiento semanal para mantener la motivación.</p></div>
+      <div class="benefit"><h3>Resultados reales</h3><p>Cambios duraderos y sostenibles.</p></div>
+    </section>
+
+    <!-- Lo que aprenderás -->
+    <section class="features section-spacing">
+      <div class="feature"><div class="feature-icon">🍎</div><p>Plan de comidas personalizado</p></div>
+      <div class="feature"><div class="feature-icon">🍽️</div><p>Estrategias para comer fuera sin culpa</p></div>
+      <div class="feature"><div class="feature-icon">🧘</div><p>Técnicas de mindset para no abandonar</p></div>
+    </section>
+
+    <!-- Planes y precios -->
+    <section class="plans section-spacing">
+      <div class="plan">
+        <h3>Básico</h3>
+        <div class="plan-price">€49/mes</div>
+        <ul>
+          <li>Plan semanal</li>
+          <li>Guía de recetas</li>
+          <li>Acceso al grupo privado</li>
+        </ul>
+        <a href="#" class="btn">Elegir Básico</a>
       </div>
-      <div class="benefit">
-        <h3>Soporte continuo</h3>
-        <p>Asesoría y seguimiento semanal para mantener la motivación.</p>
+      <div class="plan">
+        <h3>Premium</h3>
+        <div class="plan-price">€79/mes</div>
+        <ul>
+          <li>Todo lo de Básico</li>
+          <li>Consultas quincenales</li>
+          <li>Soporte por WhatsApp</li>
+        </ul>
+        <a href="#" class="btn">Elegir Premium</a>
       </div>
-      <div class="benefit">
-        <h3>Resultados reales</h3>
-        <p>Cambios de hábitos que perduran en el tiempo.</p>
+      <div class="plan">
+        <h3>VIP</h3>
+        <div class="plan-price">€119/mes</div>
+        <ul>
+          <li>Consultas semanales</li>
+          <li>Plan de ejercicio</li>
+          <li>Sesión de coaching 1:1</li>
+        </ul>
+        <a href="#" class="btn">Elegir VIP</a>
       </div>
     </section>
-<!-- Sección de Video -->
-<section class="video" style="margin: 60px 0; text-align: center;">
-  <h2>Video de Presentación</h2>
-  <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-    <!-- Reemplaza TU_VIDEO_ID por el ID de tu video de YouTube -->
-    <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" title="Video de Presentación" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
-</section><!-- Sección Lead Magnet -->
-<section class="lead-magnet" style="margin: 0 0 100px 0; text-align: center;">
-  <h2>Descarga tu Guía Gratuita</h2>
-  <p>Obtén nuestro ebook con recetas saludables y consejos prácticos.</p>
-  <a href="ruta/a/tu-guia.pdf" download class="btn" style="background:#2a7d5f; color:white; padding:15px 30px; border-radius:5px;">Descargar PDF</a>
-</section>
+
+    <!-- Garantía -->
+    <div class="guarantee">
+      <p><strong>Garantía 30 días:</strong> Si no ves resultados en tu primer mes, te devuelvo el dinero sin preguntas.</p>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq section-spacing">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-item">
+        <h4>¿Cómo funciona la asesoría?</h4>
+        <p>Realizamos un análisis de tu estilo de vida y diseñamos un plan personalizado que revisamos cada semana.</p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Puedo adaptar el plan a intolerancias?</h4>
+        <p>Sí, todos los planes se adaptan a alergias, intolerancias y preferencias alimenticias.</p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Cuánto tiempo debo comprometerme?</h4>
+        <p>Recomendamos un mínimo de 3 meses para ver cambios sostenibles.</p>
+      </div>
+    </section>
+
+    <!-- Antes y Después -->
+    <section class="before-after section-spacing">
+      <h2>Transformaciones Reales</h2>
+      <div class="ba-images">
+        <div><img src="before1.jpg" alt="Antes y después Cliente 1"><p>Cliente 1</p></div>
+        <div><img src="before2.jpg" alt="Antes y después Cliente 2"><p>Cliente 2</p></div>
+      </div>
+    </section>
+
+    <!-- Sección de Video -->
+    <section class="video section-spacing">
+      <h2>Video de Presentación</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" title="Video de Presentación" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Sección Lead Magnet -->
+    <section class="lead-magnet section-spacing">
+      <h2>Descarga tu Guía Gratuita</h2>
+      <p>Obtén nuestro ebook con recetas saludables y consejos prácticos.</p>
+      <a href="ruta/a/tu-guia.pdf" download class="btn">Descargar PDF</a>
+    </section>
+
     <!-- Testimonios -->
-    <section class="testimonials">
+    <section class="testimonials section-spacing">
       <h2>Lo que dicen mis clientes</h2>
-      <div class="testimonial">
-        <p>"Gracias a Laura mejoré mi relación con la comida y perdí 8 kg sin pasar hambre."</p>
-        <div class="author">— María G.</div>
-      </div>
-      <div class="testimonial">
-        <p>"Su plan se adaptó a mis horarios y ahora disfruto cada comida sin culpa."</p>
-        <div class="author">— Javier T.</div>
-      </div>
+      <div class="testimonial"><p>"Gracias a Laura mejoré mi relación con la comida y perdí 8 kg sin pasar hambre."</p><div class="author">— María G.</div></div>
+      <div class="testimonial"><p>"Su plan se adaptó a mis horarios y ahora disfruto cada comida sin culpa."</p><div class="author">— Javier T.</div></div>
     </section>
+
+    <!-- Suscripción secundaria -->
+    <section class="subscribe">
+      <h2>¿Quieres más recursos?</h2>
+      <p>Suscríbete y recibe tips semanales directamente en tu correo:</p>
+      <form onsubmit="alert('Gracias por suscribirte');return false;">
+        <input type="email" placeholder="Tu email" required>
+        <button class="btn">Suscribirme</button>
+      </form>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Laura Coach Nutricional | <a href="https://tusitio.com/aviso-legal" target="_blank">Aviso Legal</a></p>
-    </div>
+    <p>&copy; 2025 Laura Coach Nutricional | <a href="https://tusitio.com/aviso-legal" target="_blank">Aviso Legal</a></p>
   </footer>
+
 </body>
 </html>
